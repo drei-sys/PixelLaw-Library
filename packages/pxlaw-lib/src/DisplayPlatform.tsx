@@ -34,8 +34,6 @@ export const DisplayPlatform = ({ platformSize, customColor }: DisplayPlatformPr
     const [currentColor, setCurrentColor] = useState<colorName>("white") // default color
     const [platform, setPlatform] = useState(platformSize ? createPlatform(platformSize) : createDefaultPlatform())
 
-    console.log(currentColor)
-
     const handleGridItemClick = (rowIndex: number, colIndex: number) => {
         const newPlatform = [...platform]
         newPlatform[rowIndex][colIndex] = currentColor
@@ -57,10 +55,6 @@ export const DisplayPlatform = ({ platformSize, customColor }: DisplayPlatformPr
     return (
         <div>
             <ColorPicker value={currentColor} onChange={(newColorName: colorName) => {
-
-                console.log(newColorName)
-
-                console.log(Colors[newColorName])
 
                 const newColorHex = Colors[newColorName]
 
