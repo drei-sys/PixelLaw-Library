@@ -1,4 +1,4 @@
-export { createPixel } from './createPixel'
-export { createPlatform } from './createPlatform'
-export { startPixelLaw, DisplayPlatform } from './startPixelLaw'
-export { Colors, Platform } from '../constant/Colors'
+export * from './createPixel'
+export * from './createPlatform'
+export * from './DisplayPlatform'
+export * from '../constant/Colors'

@@ -2,13 +2,16 @@ import { PlatformSize } from "../types/Platform"
 import { Colors } from "../constant/Colors"
 import { Platform } from "../constant/Colors";
 
-// This function can be use to create a custom platform size
-export function createPlatform({x, y}: PlatformSize) {
+export function createPlatform({x, y}: PlatformSize): string[][] {
+    Platform.length = 0
+
     for(let i = 0; i < x; i++) {
-        const row = []
+        const row: string[] = []
         for(let j = 0; j < y; j++) {
             row.push(Colors.black)
         }
         Platform.push(row)
     }
+
+    return Platform
 }
