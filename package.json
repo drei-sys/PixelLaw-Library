@@ -1,0 +1,8 @@
+{
+  "name": "package-template",
+  "private": true,
+  "workspaces": [
+    "packages/pxlaw-lib",
+    "examples/vite-example"
+  ]
+}
