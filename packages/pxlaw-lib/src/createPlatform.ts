@@ -8,7 +8,7 @@ export function createPlatform({x, y}: PlatformSize): string[][] {
     for(let i = 0; i < x; i++) {
         const row: string[] = []
         for(let j = 0; j < y; j++) {
-            row.push(Colors.black)
+            row.push(Colors.gray)
         }
         Platform.push(row)
     }

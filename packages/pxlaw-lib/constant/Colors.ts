@@ -9,7 +9,8 @@ export const Colors: Record<colorName, hexColor> = {
     white: "#FFFFFF",
     black: "#000000",
     violet: "#7F00FF",
-    orange: "#FFA500"
+    orange: "#FFA500",
+    gray: "#242424"
 }
 
 export const Platform: string[][] = []

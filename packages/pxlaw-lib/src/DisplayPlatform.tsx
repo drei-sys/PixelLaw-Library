@@ -15,7 +15,7 @@ function createDefaultPlatform(): string[][] {
     for (let i = 0; i < 10; i++) {
         const row = []
         for (let j = 0; j < 10; j++) {
-            row.push(Colors.black)
+            row.push(Colors.gray)
         }
         Platform.push(row)
     }
@@ -49,15 +49,14 @@ export const DisplayPlatform = ({ platformSize, customColor }: DisplayPlatformPr
                 setPlatform(platformSize ? createPlatform(platformSize) : createDefaultPlatform())
             })
         }
+        localStorage.setItem('platform', JSON.stringify(platform))
     }, [customColor]);
 
 
     return (
         <div>
             <ColorPicker value={currentColor} onChange={(newColorName: colorName) => {
-
                 const newColorHex = Colors[newColorName]
-
                 setCurrentColor(newColorHex as colorName)
             }} />
             <div className="grid-container">
@@ -67,7 +66,7 @@ export const DisplayPlatform = ({ platformSize, customColor }: DisplayPlatformPr
                             <div
                                 key={colIndex}
                                 className="grid-item"
-                                style={{ backgroundColor: colorName }} // Directly use the hex color value
+                                style={{ backgroundColor: colorName }}
                                 onClick={() => handleGridItemClick(rowIndex, colIndex)}
                             >
                             </div>
